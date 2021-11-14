@@ -14,9 +14,11 @@ def make_font(name, size):
 def main():
 	serial = i2c(port=1, address=0x3C)
 	device = sh1106(serial)
-	font = make_font("code2000.ttf", 10)
+	font = make_font("code2000.ttf", 10) #フォントを指定
 
-	rss_link = 'https://news.yahoo.co.jp/rss/topics/it.xml' #RSS URL LINK
+	rss_link = 'https://news.yahoo.co.jp/rss/topics/it.xml' #RSSのURL(お好みで)
+	counter = 0
+	interval = 100 #表示を繰り返したらRSSフィードをリフレッシュ
 
 	rss_dic = feedparser.parse(rss_link)
 	while 1:
@@ -36,6 +38,9 @@ def main():
 						draw.text((2,10+i*12), title[i*12:i*13+length], font=font, fill="white")
 						time.sleep(1)
 						break
+		counter += 1
+		if counter == interval:
+			rss_dic = feedparser.parse(rss_link)
 
 if __name__ == "__main__":
 	try:
