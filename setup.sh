@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "sh1106 OLEDƒfƒBƒXƒvƒŒƒC‚ÌƒWƒƒƒ“ƒpü‚ğˆÈ‰º‚Ì‚æ‚¤‚ÉŒ‹ü‚µ‚Ä‚¢‚é‚±‚Æ‚ğŠm”F‚µ‚Ä‚­‚¾‚³‚¢B"
+echo "sh1106 OLEDãƒ‡ã‚£ã‚¹ãƒ—ãƒ¬ã‚¤ã®ã‚¸ãƒ£ãƒ³ãƒ‘ç·šã‚’ä»¥ä¸‹ã®ã‚ˆã†ã«çµç·šã—ã¦ã„ã‚‹ã“ã¨ã‚’ç¢ºèªã—ã¦ãã ã•ã„ã€‚"
 echo "VCC -> 3.3v"
 echo "GND -> GND"
 echo "SCL -> GPIO9"
@@ -8,4 +8,5 @@ echo "SDA -> GPIO8"
 
 sudo apt-get install -y python3-dev python3-pip libfreetype6-dev libjpeg-dev build-essential
 sudo -H pip3 install --upgrade luma.oled
-echo "ƒvƒƒOƒ‰ƒ€‚ğÀs‚·‚é‚É‚ÍA[python3 sh1106_rss.py]‚Æ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢B"
+pip install feedparser
+echo "ãƒ—ãƒ­ã‚°ãƒ©ãƒ ã‚’å®Ÿè¡Œã™ã‚‹ã«ã¯ã€[python3 sh1106_rss.py]ã¨å…¥åŠ›ã—ã¦ãã ã•ã„ã€‚"
